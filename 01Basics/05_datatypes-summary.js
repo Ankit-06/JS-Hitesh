@@ -37,3 +37,27 @@ console.log(typeof bigNumber); //undefined earlier now it is bigint
 console.log(typeof outsideTemp); //object
 console.log(typeof myFunction); //function
 console.log(typeof id); //symbol
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myYoutubename = "ankitmishradotcom";
+
+let anotherName = myYoutubename;
+anotherName = "nameIsUpdated";
+
+console.log(myYoutubename);
+console.log(anotherName);
+
+let userOne = {
+  email: "user@google.com",
+  upiId: "user@ybl",
+};
+
+let userTwo = userOne;
+
+userTwo.email = "ankit@google.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);
