@@ -31,10 +31,25 @@ const obj = { ...obj1, ...obj2 }; // using spread operator
 // console.log(obj);
 // console.log(obj3 === obj);
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+
+const course = {
+  courseName: "Js in hindi",
+  price: "999",
+  courseInstructor: "Ankit",
+};
+
+// course.courseInstructor
+
+// destructuring
+// const { courseInstructor } = course;
+// console.log(courseInstructor);
+const { courseInstructor: instructor } = course;
+console.log(instructor);
+f
