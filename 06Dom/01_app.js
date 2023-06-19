@@ -1,10 +1,13 @@
 document.getElementById("title");
 document.getElementById("title").id;
 document.getElementById("title").className;
+
 document.getElementById("title").getAttribute("id");
 document.getElementById("title").getAttribute("class");
+
 document.getElementById("title").setAttribute("class", "custom-class"); //overrides the class name
 document.getElementById("title").setAttribute("class", "custom-class heading"); //to add multiple classes use this
+
 document.getElementById("title").style = "backgroundColor:red"; //add styles
 document.getElementById("title").style.backgroundColor = "red"; //add styles
 
