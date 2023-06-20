@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model part-4</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`; //entire DOM is traversed here
+
+      const ul = document.querySelector(".language");
+
+      ul.appendChild(li);
+    }
+
+    addLanguage("Python");
+    addLanguage("Java");
+    addLanguage("Typescript");
+
+    function addOptimizedLang(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptimizedLang("Golang");
+
+    //Edit
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = "Mojo" //unoptimized way
+
+    const newLi = document.createElement("li");
+    newLi.textContent = "Mojo";
+    secondLang.replaceWith(newLi);
+
+    const firstLang = document.querySelector("li:first-child");
+    // console.log(firstLang.outerHTML);
+    firstLang.outerHTML = "<li>Update JS value</li>";
+
+    //remove
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove(); //remove element
+  </script>
+</html>
