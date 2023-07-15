@@ -1,6 +1,7 @@
 # Projects relared to DOM
 
 ## project link
+
 [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
 
 # Solution code
@@ -163,4 +164,68 @@ const newGame = () => {
     playGame = true;
   });
 };
+```
+
+## Project 5
+
+```javascript
+const insert = document.querySelector("#insert");
+
+window.addEventListener("keydown", (e) => {
+  insert.innerHTML = `
+        <div class='color'>
+            <table>
+                <tr>
+                    <th>Key</th>
+                    <th>KeyCode</th>
+                    <th>Code</th>
+                </tr>
+                <tr>
+                    <td>${e.key === " " ? "Space" : e.key}</td>
+                    <td>${e.keyCode}</td>
+                    <td>${e.code}</td>
+                </tr>
+            </table>
+        </div>`;
+});
+```
+
+### Project 6
+
+```javascript
+//generate a random color
+
+const randomColor = () => {
+  const hex = "0123456789ABCDEF";
+  let color = "#";
+
+  for (let i = 0; i < 6; i++) {
+    color += hex.charAt(Math.floor(Math.random() * 16));
+  }
+  return color;
+};
+
+let intervalId;
+
+const startChangingColor = () => {
+  if (!intervalId) {
+    intervalId = setInterval(() => {
+      document.body.style.backgroundColor = randomColor();
+    }, 1000);
+  }
+};
+
+const stopChangingColor = () => {
+  clearInterval(intervalId);
+  intervalId = null; //dereferencing the value to free memory, (clean code practice)
+  console.log("STOPPED");
+};
+
+document.querySelector("#start").addEventListener("click", () => {
+  startChangingColor();
+});
+
+document.querySelector("#stop").addEventListener("click", () => {
+  stopChangingColor();
+});
 ```
