@@ -20,6 +20,8 @@ promiseOne.then(function () {
   console.log("Promise consumed::");
 });
 
+/**********************PROMISE 2***********************/
+
 new Promise(function (resolve, reject) {
   setTimeout(function () {
     console.log("async task two");
@@ -29,6 +31,7 @@ new Promise(function (resolve, reject) {
   console.log("async 2 resolved");
 });
 
+/**********************PROMISE 3***********************/
 const promiseThree = new Promise(function (resolve, reject) {
   setTimeout(function () {
     resolve({ username: "Ankit", email: "ankit@gmail.com" });
@@ -39,6 +42,7 @@ promiseThree.then(function (user) {
   console.log(user);
 });
 
+/**********************PROMISE 4***********************/
 const promiseFour = new Promise(function (resolve, reject) {
   setTimeout(function () {
     let error = false;
@@ -67,6 +71,7 @@ const userName = promiseFour
 
 // console.log(userName);
 
+/**********************PROMISE 5***********************/
 const promiseFive = new Promise((resolve, reject) => {
   setTimeout(() => {
     let error = true;
@@ -89,6 +94,7 @@ async function consumePromiseFive() {
 
 consumePromiseFive();
 
+/************************FETCH*************************/
 async function getAllUsers() {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
