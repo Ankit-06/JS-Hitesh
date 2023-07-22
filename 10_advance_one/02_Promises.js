@@ -107,3 +107,5 @@ fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => response.json())
   .then((data) => console.log(data))
   .catch((err) => console.log("Error  ", err));
+
+// Details about fetch: https://youtu.be/Rive84an6Lc
