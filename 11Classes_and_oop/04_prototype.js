@@ -17,14 +17,14 @@ Object.prototype.Ankit = function () {
   console.log(`Ankit is present in all objects`);
 };
 
-heroPower.Ankit();
-myHeros.Ankit();
+// heroPower.Ankit();
+// myHeros.Ankit();
 
 Array.prototype.heyAnkit = function () {
   console.log(`Ankit says hello`);
 };
 
-myHeros.heyAnkit();
+// myHeros.heyAnkit();
 // heroPower.heyAnkit(); //error because function is set to only Array prototype.
 
 //Inheritance
@@ -55,9 +55,8 @@ Object.setPrototypeOf(TeachingSupport, Teacher); //(prototypal inheritance)
 
 let anotherUserName = "chaiaurcode           ";
 String.prototype.trueLength = function () {
-  console.log(this);
-  console.log(this.name);
-  console.log(`true length is: ${this.trim().length()}`);
+  console.log(`${this}`); //jisne call kiya, wahi this hai (ex: ankit,iceTea)
+  console.log(`true length is: ${this.trim().length}`);
 };
 
 anotherUserName.trueLength();
