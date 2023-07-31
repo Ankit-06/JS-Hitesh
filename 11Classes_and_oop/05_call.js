@@ -9,7 +9,7 @@ function createUser(username, email, password) {
 
   SetUserName.call(this, username); //call method use krte hai taki uska reference hold kr sake mtlb ki uske andar wale variables aur functions ka context hold rakhna hai even after the EC gets removed from the call stack.
   //this is passed as the 1st parameter inside the call method to give the current context to another function.
-  //now the setUserName function will not use their own this, instead will use the this of createUser funciton and now the username value will be accessible in createUser function as well.
+  //now the setUserName function will not use their own this, instead will use the this of createUser function and now the username value will be accessible in createUser function as well.
   this.email = email;
   this.password = password;
 }
