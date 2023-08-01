@@ -18,6 +18,10 @@
         document
           .querySelector("button")
           .addEventListener("click", this.handleClick.bind(this));
+
+        /*here if we don't use bind then also the it works fine and handleClick is called but in handle click function this do not have the reference to properties defined in constructor.
+        Therefore we forefully bind this keyword to pass the context/reference of the class so that the properties are also accessible there. 
+        */
       }
 
       handleClick() {
